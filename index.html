@@ -290,14 +290,14 @@
 
  } // end of the window.onload function
 	 
-    //img.style.position = "relative";
-    img.style.left = '0px';
-    img.style.top = '0px';
+    fileInput.style.position = "relative";
+    fileInput.style.left = '0px';
+    fileInput.style.top = '0px';
 
     function move(dir, delta) {
-    	const prev = parseInt( img.style[dir] );
+    	const prev = parseInt( fileInput.style[dir] );
   // assert !Number.isNaN(prev)
-    	img.style[dir] = prev + delta + 'px'; 
+    	fileInput.style[dir] = prev + delta + 'px'; 
     }
 
     function moveUp() { move('top', -10) }
