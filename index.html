@@ -290,21 +290,6 @@
 
  } // end of the window.onload function
 	 
-    fileInput.style.position = "relative";
-    fileInput.style.left = '0px';
-    fileInput.style.top = '0px';
-
-    function move(dir, delta) {
-    	const prev = parseInt( fileInput.style[dir] );
-  // assert !Number.isNaN(prev)
-    	fileInput.style[dir] = prev + delta + 'px'; 
-    }
-
-    function moveUp() { move('top', -10) }
-    function moveDown() { move('top', 10) }
-    function moveLeft() { move('left', -10) }
-    function moveRight() { move('left', 10) }
-
 //creates array named coords for storing coordinates of ROIs
 
 var coords = [];
@@ -748,10 +733,10 @@ function analyze() {
 
       <a data-role="button" onClick="reset();">Reset</a>
       <a data-role="button" onClick="draw_b();">Rectangle</a>
-      <a data-role="button" onClick="moveUp()">Up</a>
+      <!-- <a data-role="button" onClick="moveUp()">Up</a>
       <a data-role="button" onClick="moveDown()">Down</a>
       <a data-role="button" onClick="moveLeft()">Left</a>
-      <a data-role="button" onClick="moveRight()">Right</a>
+      <a data-role="button" onClick="moveRight()">Right</a> -->
 
 
 
