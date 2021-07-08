@@ -291,7 +291,17 @@
  } // end of the window.onload function
 
 
+const box = document.getElementById("img");
 
+function vertical(value){
+  const {top} = box.getBoundingClientRect();
+  box.style.top = `${top + value}px`;
+}
+
+function horizontal(value){
+  const {left} = box.getBoundingClientRect();
+  box.style.left = `${left + value}px`;
+}
 
 //creates array named coords for storing coordinates of ROIs
 
@@ -736,8 +746,10 @@ function analyze() {
 
       <a data-role="button" onClick="reset();">Reset</a>
       <a data-role="button" onClick="draw_b();">Rectangle</a>
-
-      
+      <a data-role="button" onClick="vertical(-10)">Up</a>
+      <a data-role="button" onClick="vertical(10)">Down</a>
+      <a data-role="button" onClick="horizontal(-10)">Left</a>
+      <a data-role="button" onClick="horizontal(10)">Right</a>
 
       
 
